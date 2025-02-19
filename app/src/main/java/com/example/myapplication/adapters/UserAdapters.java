@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,7 +17,7 @@ import com.example.myapplication.R;
 
 
 import com.example.myapplication.Entity.Users;
-import com.example.myapplication.signup;
+import com.example.myapplication.SignUp;
 
 import java.util.ArrayList;
 
@@ -55,7 +54,7 @@ public class UserAdapters extends ArrayAdapter<Users>{
 
         update.setOnClickListener(v -> {
             Toast.makeText(v.getContext(), "Edit Call", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(v.getContext(), signup.class);
+            Intent intent = new Intent(v.getContext(), SignUp.class);
 
             intent.putExtra("USER_ID", listData.id);  // Pass the user ID
             intent.putExtra("USER_NAME", listData.username);  // Pass the username
